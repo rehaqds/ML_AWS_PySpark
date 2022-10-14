@@ -3,7 +3,7 @@
 
 ## 1. Le contexte
 
-Le but de ce projet est de créer un classifieur d'images de fruits et légumes dans un environnement Big Data sur AWS et avec PySpark pour distribuer les calculs. Afin de limiter les frais, seuls 2 serveurs EC2 sont utilisés et le nombre d'images est limité.
+Le but de ce projet est de créer un classifieur d'images de fruits et légumes qui sera utilisé par des robots cueilleurs. L'outil devra travailler dans un environnement Big Data sur AWS et avec PySpark pour distribuer les calculs. Afin de limiter les frais, seuls 2 serveurs EC2 sont utilisés et le nombre d'images est limité.
 
 L'étude est effectuée sur AWS EMR. Les données sont divisées en paquets et envoyées à plusieurs ordinateurs qui effectuent en parallèle les différentes transformations/actions en gardant les données dans leur RAM.
 
@@ -35,7 +35,12 @@ Ensuite on effectue une réduction de dimension : ACP (18 composantes = 90% vari
 
 ![image](https://user-images.githubusercontent.com/108366684/195698981-176b1493-eb95-4553-a3ea-f1b40a7b881c.png)
 
+
+## 5. Conclusion
+
+Cette première étape a donc permis de mettre en place l’infrastructure Big Data nécessaire au futur développement du projet de robot cueilleur.
+
 Travail complémentaire à effectuer par la suite (si financement disponible pour AWS):
-- Tester différents modèles de classification en appliquant un fine-tuning sur plusieurs algorithmes CNN pré-entraînés (EfficientNet, Inception, ...).
-- Augmenter la taille/puissance du cluster utilisé sur le Cloud afin de pouvoir travailler avec l’intégralité du jeu de données (90k) puis des datasets plus volumineux.
+- Tester différents modèles de classification en appliquant un fine-tuning sur plusieurs algorithmes CNN pré-entraînés (EfficientNet, Xception, ...).
+- Augmenter la taille/puissance du cluster utilisé sur le Cloud afin de pouvoir travailler avec l’intégralité du jeu de données (90k) puis des datasets plus volumineux et plus variés.
 
